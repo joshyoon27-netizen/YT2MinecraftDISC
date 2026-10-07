@@ -58,7 +58,10 @@ changes it.
 The converter's page, its engine and the project's own notes are all one story:
 [`webapp/README.md`](webapp/README.md) is the engine's documentation - the
 formats it writes, the trim and normalise options, and every environment
-variable read anywhere in the web half.
+variable read anywhere in the web half. [`docs/CONVERSION-PIPELINE.md`](docs/CONVERSION-PIPELINE.md)
+is the other half of that story: the exact `ffmpeg` command line and the
+byte-for-byte `.mcaddon` layout, so the pipeline can be reproduced with plain
+`ffmpeg` and `zip` alone.
 
 A converted file arrives as a normal browser download, and the natural place to
 put it is `discs/` next to the player - the player already treats that folder

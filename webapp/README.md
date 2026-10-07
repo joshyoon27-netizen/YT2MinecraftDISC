@@ -234,6 +234,10 @@ every visitor.
 | `_host.py` | shows this app to a phone: widen the bind, open the firewall, print the address, optional tunnel |
 | `templates/`, `static/` | the form, the progress page, one stylesheet, one script |
 
+The exact `ffmpeg` command line this engine builds, and the byte-for-byte layout
+of the `.mcaddon` `packs.py` writes, are documented for external tooling in
+[`../docs/CONVERSION-PIPELINE.md`](../docs/CONVERSION-PIPELINE.md).
+
 Conversions happen **outside** the request: `/convert` saves the upload, starts
 a job and redirects to `/job/<id>`, which polls `/api/jobs/<id>`. A long encode
 therefore cannot time out a request, and the page still works (minus the live
